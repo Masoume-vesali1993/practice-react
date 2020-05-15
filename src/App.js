@@ -6,7 +6,7 @@ function App() {
   return (
     <div>
       <h1>salam</h1>
-      <User />
+      <User name="masoume" age="26"/>
     </div>
   );
 }

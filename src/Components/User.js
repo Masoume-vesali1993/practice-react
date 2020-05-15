@@ -1,11 +1,12 @@
 import React from 'react';
-function sayHello(){
-    return 'Hello';
-}
-let User = function (){
-    let u = {'name': 'Masoume'};
+
+let User = function (props){
+
     return (
-        <h2>some {sayHello()} text</h2>
+        <div>
+            some be {props.name}<br />
+            shoma {props.age} sal darid
+        </div>
     );
 }
 
