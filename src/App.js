@@ -3,7 +3,9 @@ import React from 'react';
 
 function App() {
   return (
-    React.createElement('div', null, 'salam') //besorate react
+    <div>
+      <h1>salam</h1>
+    </div>
   );
 }
 
