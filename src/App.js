@@ -7,7 +7,7 @@ function App() {
     <div>
       <h1>salam</h1>
       <User name="masoume" age="26">
-          my lastname vsali
+          <h1>my lastname vsali</h1>
         </User>
     </div>
   );
