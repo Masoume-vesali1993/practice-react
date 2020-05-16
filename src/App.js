@@ -12,7 +12,8 @@ class App extends Component {
   }
 
   onButtonClick = () => {
-    console.log(this.state);
+    this.state.users[0].name = "nazanin";
+    this.render();
   }
 
   render(){
