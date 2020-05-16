@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 
 export default class User extends Component  {
     state = {
+        name : this.props.name,
+        age : this.props.age,
+    }
 
+    onButtonChangeClicked = () => {
+        this.props.onChange('learn')
     }
 
     render(){
-        this.props.onChange('learn react');
         return(
             <div>
+                <button onClick={this.onButtonChangeClicked}>change</button>
                 some be {this.props.name}<br />
                 shoma {this.props.age} sal darid<br/>
                 {this.props.children}
