@@ -11,7 +11,10 @@ export default class User extends Component  {
             name : 'fariba',
             age : 30,
         });
-        this.props.onChange('learn');
+        this.props.onChange(this.props.id,{
+            name: this.state.name,
+            age: this.state.age,
+        });
     }
 
     render(){
