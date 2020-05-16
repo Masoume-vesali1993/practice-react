@@ -7,7 +7,11 @@ export default class User extends Component  {
     }
 
     onButtonChangeClicked = () => {
-        this.props.onChange('learn')
+        this.setState({
+            name : 'fariba',
+            age : 30,
+        });
+        this.props.onChange('learn');
     }
 
     render(){
