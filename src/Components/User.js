@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
 
-// class User extends Component  {
-//     render(){
-//         return(
-//             <div>
-//             some be {this.props.name}<br />
-//             shoma {this.props.age} sal darid<br/>
-//             {this.props.children}
-//             </div>
-//         );
-//     }
-// }
+export default class User extends Component  {
+    state = {
 
+    }
 
-let user = function (props){
-
-    return (
-        <div>
-            some be {props.name}<br />
-            shoma {props.age} sal darid<br/>
-            {props.children}
-        </div>
-    );
+    render(){
+        this.props.onChange('learn react');
+        return(
+            <div>
+                some be {this.props.name}<br />
+                shoma {this.props.age} sal darid<br/>
+                {this.props.children}
+            </div>
+        );
+    }
 }
 
-export default user;
+
+// let user = function (props){
+
+//     return (
+//         <div>
+//             some be {props.name}<br />
+//             shoma {props.age} sal darid<br/>
+//             {props.children}
+//         </div>
+//     );
+// }
+
+// export default user;
