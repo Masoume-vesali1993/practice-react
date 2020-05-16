@@ -14,9 +14,9 @@ class App extends Component {
   render(){
   return (
     <div>
-      <User name= {this.state.users[0].name} age="26" />
-      <User name="parham" age="6" />
-      <User name="arshia" age="9" />
+      <User name= {this.state.users[0].name} age={this.state.users[0].age} />
+      <User name={this.state.users[1].name} age={this.state.users[1].age} />
+      <User name={this.state.users[2].name} age={this.state.users[2].age} />
     </div>
     );
   }
