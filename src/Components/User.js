@@ -13,7 +13,7 @@ import React, { Component } from 'react';
 // }
 
 
-let User = function (props){
+let user = function (props){
 
     return (
         <div>
@@ -24,4 +24,4 @@ let User = function (props){
     );
 }
 
-export default User;
+export default user;
