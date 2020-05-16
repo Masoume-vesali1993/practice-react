@@ -12,7 +12,7 @@ class App extends Component {
   }
 
   onButtonClick = () => {
-    console.log(this);
+    console.log(this.state);
   }
 
   render(){
