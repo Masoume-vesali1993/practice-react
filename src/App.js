@@ -12,9 +12,18 @@ class App extends Component {
   }
 
   onButtonClick = () => {
-    this.state.users[0].name = "nazanin";
-    this.render();
-  }
+    // in kar nemikone
+    // this.state.users[0].name = "nazanin";
+    // this.render();
+  this.setState({
+    users : [
+      {name:"nazanin" , age:"26"},
+      {name:"Alisa", age:"3"},
+      {name:"setia", age:"1"},
+    ]
+  });
+}
+
 
   render(){
   return (
