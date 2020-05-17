@@ -19,6 +19,9 @@ export default class User extends Component  {
 
     render(){
         let style = {color: 'red'};
+        if(this.state.age >=18){
+            style.color = 'blue';
+        }
         return(
             <div>
                 <button onClick={this.onButtonChangeClicked}>change</button>
