@@ -23,8 +23,8 @@ class App extends Component {
     <div>
       <button onClick={this.onButtonClick}> change state </button>
       <User name= {this.state.users[0].name} age={this.state.users[0].age} id={this.state.users[0].id} onChange={this.onUserDateChange}/>
-      <User name={this.state.users[1].name} age={this.state.users[1].age} id={this.state.users[1].id} onChange={this.onUserDateChange} />
-      <User name={this.state.users[2].name} age={this.state.users[2].age} id={this.state.users[2].id} onChange={this.onUserDateChange} />
+      {/* <User name={this.state.users[1].name} age={this.state.users[1].age} id={this.state.users[1].id} onChange={this.onUserDateChange} />
+      <User name={this.state.users[2].name} age={this.state.users[2].age} id={this.state.users[2].id} onChange={this.onUserDateChange} /> */}
     </div>
     );
   }

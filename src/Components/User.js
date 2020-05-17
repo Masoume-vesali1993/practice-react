@@ -25,7 +25,7 @@ export default class User extends Component  {
                 shoma {this.props.age} sal darid<br/>
                 {this.props.children}
 
-                <h2>some text</h2>
+                <h2 style={{color:'red'}}>some text</h2>
                 <h3>another text</h3>
             </div>
         );
