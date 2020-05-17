@@ -18,6 +18,7 @@ export default class User extends Component  {
     }
 
     render(){
+        let style = {color: 'red'};
         return(
             <div>
                 <button onClick={this.onButtonChangeClicked}>change</button>
@@ -25,7 +26,7 @@ export default class User extends Component  {
                 shoma {this.props.age} sal darid<br/>
                 {this.props.children}
 
-                <h2 style={{color:'red'}}>some text</h2>
+                <h2 style={style}>some text</h2>
                 <h3>another text</h3>
             </div>
         );
