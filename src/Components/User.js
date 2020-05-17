@@ -30,7 +30,7 @@ export default class User extends Component  {
                 {this.props.children}
 
                 <h2 style={style}>some text</h2>
-                <h3>another text</h3>
+                <h3 className="yellow-color">another text</h3>
             </div>
         );
     }
