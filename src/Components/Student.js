@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 export default class Student extends Component{
     static defultProps = {
@@ -21,3 +22,6 @@ export default class Student extends Component{
 // Student.defaultProps = {
 //     age : 15
 // }
+Student.propTypes = {
+    age: PropTypes.string
+}
