@@ -7,7 +7,7 @@ export default class Student extends Component{
     }
 
     static propTypes = {
-        age: PropTypes.bool
+        age: PropTypes.number.isRequired
     }
 
     getColor = () => {
