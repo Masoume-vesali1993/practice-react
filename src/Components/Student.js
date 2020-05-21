@@ -12,3 +12,7 @@ export default class Student extends Component{
         );
     }
 }
+
+Student.defaultProps = {
+    age : 15
+}
