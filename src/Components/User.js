@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Student from './Componens/Student';
 import './User.css';
 
 export default class User extends Component  {
