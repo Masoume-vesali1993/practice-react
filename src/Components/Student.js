@@ -1,9 +1,14 @@
 import React, {Component} from 'react';
 
 export default class Student extends Component{
+    defultProps = {
+        age:0
+    }
+
     getColor = () => {
         return this.props.age >= 18 ? 'green' : 'red';
     }
+    
     render(){
         return(
             <div style={{background: this.getColor()}}>
@@ -13,6 +18,6 @@ export default class Student extends Component{
     }
 }
 
-Student.defaultProps = {
-    age : 15
-}
+// Student.defaultProps = {
+//     age : 15
+// }
