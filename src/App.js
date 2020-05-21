@@ -6,7 +6,7 @@ class App extends Component {
   render(){
     return (
       <div>
-        <Student />
+        <Student name="Masoume" age={26} />
       </div>
     );
   }

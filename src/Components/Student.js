@@ -4,7 +4,7 @@ export default class Student extends Component{
     render(){
         return(
             <div>
-                noting
+                {this.props.name} [{this.props.age}]
             </div>
         );
     }
