@@ -6,6 +6,10 @@ export default class Student extends Component{
         age:0
     }
 
+    static propTypes = {
+        age: PropTypes.bool
+    }
+
     getColor = () => {
         return this.props.age >= 18 ? 'green' : 'red';
     }
@@ -22,6 +26,8 @@ export default class Student extends Component{
 // Student.defaultProps = {
 //     age : 15
 // }
-Student.propTypes = {
-    age: PropTypes.string
-}
+
+
+// Student.propTypes = {
+//     age: PropTypes.number
+// }
