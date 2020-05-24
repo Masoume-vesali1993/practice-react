@@ -4,7 +4,7 @@ import Student from './Components/Student';
 
 class App extends Component {
   state = {
-    users : [
+    students : [
       {id: 1, name:'Masoume'},
       {id: 1, name:'Zahra'},
       {id: 1, name:'Fateme'},
@@ -13,7 +13,9 @@ class App extends Component {
   render(){
     return (
       <div> 
-        <Student name={this.state.users[0].name} />
+        {
+          this.state.students.map(s => <Student name={s.name} />)
+        }
       </div>
     );
   }
