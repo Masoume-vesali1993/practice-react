@@ -10,13 +10,12 @@ class App extends Component {
       {id: 3, name:'Fateme'},
     ],
 
-    randomUserId: null
+    randomUserId: 0
   }
 
   randomUserHidden = () => {
     let newState = {...this.state};
     newState.randomUserId = Math.ceil(Math.random() *3);
-    console.log(newState);
     this.setState(newState);
   }
 
@@ -25,7 +24,12 @@ class App extends Component {
       <div> 
         <button onClick={this.randomUserHidden}>hide random state</button>
         {
-          this.state.students.map(
+          this.state.students
+          .filter(
+            s => s.id != this.state.randomUserId
+          )
+
+          .map(
             s => ( 
             <Student name={s.name} />
             )
