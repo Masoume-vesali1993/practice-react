@@ -16,6 +16,7 @@ class App extends Component {
   randomUserHidden = () => {
     let newState = {...this.state};
     newState.randomUserId = Math.ceil(Math.random() *3);
+    console.log(newState);
     this.setState(newState);
   }
 
