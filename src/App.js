@@ -10,11 +10,13 @@ class App extends Component {
       {id: 3, name:'Fateme'},
     ],
 
-    randomUser = null
+    randomUserId: null
   }
 
   randomUserHidden = () => {
-    randomUser = Math
+    let newState = {...this.state};
+    newState.randomUserId = Math.ceil(Math.random() *3);
+    this.setState(newState);
   }
 
   render(){
