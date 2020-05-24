@@ -8,8 +8,6 @@ class App extends Component {
       <div>
         <Student name="Masoume" age={26} />
         <Student name="Fariba" age={17} />
-        <Student name="Samira" />
-        <Student name="Zahra" age="bist" />
       </div>
     );
   }
