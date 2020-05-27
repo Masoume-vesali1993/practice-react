@@ -17,10 +17,15 @@ body{
 .post-panel .post{
     background: #fff;
     margin: 5px;
-    padding:  0 5px;
+    padding: 5px;
 }
 .post-panel .post h3{
     text-align: left;
     background: lightgreen;
     border: 1px solid #444;
+}
+.post-panel .post p{
+    padding: 0;
+    margin: 0;
+    text-align: left;
 }
