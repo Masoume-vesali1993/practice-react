@@ -17,6 +17,19 @@ class App extends Component {
     return (
       <div> 
         <h1>{this.state.title}</h1>
+
+        <div>
+          <h2>my post:</h2>
+
+          {this.state.posts.map(
+            post => (
+              <div className="post">
+                <h3>{post.title}</h3>
+                <p>{post.body}</p>
+              </div>
+            )
+          )}
+        </div>
       </div>
     );
   }
