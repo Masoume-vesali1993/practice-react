@@ -12,12 +12,17 @@ class App extends Component {
   }
   
 
+  addNewPost = (post) => {
+    console.log(post);
+  }
+
+
   render(){
     return (
       <div> 
         <h1>{this.state.title}</h1>
 
-        <PostInsert />
+        <PostInsert onPostCreate={this.addNewPost} />
 
         <div className="post-panel">
           <h2>my post:</h2>

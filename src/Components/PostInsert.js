@@ -2,10 +2,15 @@ import React, {Component} from 'react';
 
 
 class PostInsert extends Component{
+    onPostCreate = (e) => {
+        e.preventDefult();
+        let post = {title: 'new', body: 'all'};
+        this.props.onPostCreate(post);
+    }
     render (){
         return (
             <div className="post-insert">
-                <form>
+                <form onSubmit={this.onPostCreate}>
                     <div>
                         <input placeholder="post title" />
                     </div>
