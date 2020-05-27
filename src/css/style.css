@@ -23,9 +23,11 @@ body{
     text-align: left;
     background: lightgreen;
     border: 1px solid #444;
+    margin: 0;
 }
 .post-panel .post p{
     padding: 0;
     margin: 0;
+    margin-top: 8px;
     text-align: left;
 }
