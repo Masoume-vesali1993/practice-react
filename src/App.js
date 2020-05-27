@@ -18,7 +18,7 @@ class App extends Component {
       <div> 
         <h1>{this.state.title}</h1>
 
-        <div>
+        <div className="post-panel">
           <h2>my post:</h2>
 
           {this.state.posts.map(

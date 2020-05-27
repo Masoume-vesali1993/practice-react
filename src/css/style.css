@@ -2,3 +2,7 @@ body{
     background: #fff;
     text-align: center;
 }
+.post-panel{
+    border: 1px #888 solid;
+    background: #EEE;
+}
