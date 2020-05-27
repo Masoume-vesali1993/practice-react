@@ -16,7 +16,7 @@ class App extends Component {
     let newState = {...this.state};
     let id = newState.posts[newState.posts.length- 1].id + 1;
     post.id = id;
-
+    // newState.posts.push(post);
     console.log(post);
   }
 
