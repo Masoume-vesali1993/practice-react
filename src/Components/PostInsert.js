@@ -3,11 +3,12 @@ import React, {Component} from 'react';
 
 class PostInsert extends Component{
     onPostCreate = (e) => {
-        e.preventDefult();
-        let form = e.target;
-        console.log(form.lements.title);
-        return;
-        let post = {title: 'new', body: 'all'};
+        e.preventDefault();
+
+        let post = {
+            title: e.target.elements.title.value,
+            body: e.target.elements.body.value
+        };
         this.props.onPostCreate(post);
     }
 
