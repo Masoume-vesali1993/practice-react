@@ -5,7 +5,7 @@ class PostInsert extends Component{
     onPostCreate = (e) => {
         e.preventDefult();
         let form = e.target;
-        console.log(form);
+        console.log(form.lements);
         return;
         let post = {title: 'new', body: 'all'};
         this.props.onPostCreate(post);
@@ -16,12 +16,12 @@ class PostInsert extends Component{
             <div className="post-insert">
                 <form onSubmit={this.onPostCreate}>
                     <div>
-                        <input placeholder="post title" />
+                        <input name="title" placeholder="post title" />
                     </div>
 
 
                     <div>
-                        <textarea placeholder="post body"></textarea>
+                        <textarea name="body" placeholder="post body"></textarea>
                     </div>
 
                     <button type="submit">create</button>
