@@ -13,6 +13,10 @@ class App extends Component {
   
 
   addNewPost = (post) => {
+    let newState = {...this.state};
+    let id = newState.posts[newState.posts.length- 1].id + 1;
+    post.id = id;
+
     console.log(post);
   }
 
@@ -29,7 +33,7 @@ class App extends Component {
 
           {this.state.posts.map(
             post => (
-              <div className="post">
+              <div className="post" key={post.id}>
                 <h3>{post.title}</h3>
                 <p>{post.body}</p>
               </div>
