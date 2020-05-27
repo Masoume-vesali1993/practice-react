@@ -13,9 +13,20 @@ class PostInsert extends Component{
         // };
 
         let post = {
-            title: this.titleInput.value,
-            body: this.bodyInput.value
+            title: this.titleInput.value.trim(),
+            body: this.bodyInput.value.trim()
         };
+
+        if(post.title.length && post.body.length){
+            this.titleInput.value = '';
+            this.bodyInput.value = '';
+
+            this.props.onPostCreate(post);
+
+        }
+        else{
+            alert('please fill input');
+        }
 
         this.props.onPostCreate(post);
     }
