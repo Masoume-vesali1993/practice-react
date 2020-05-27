@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PostInsert from './Components/PostInsert';
 
 
 
@@ -18,6 +19,8 @@ class App extends Component {
       <div> 
         <h1>{this.state.title}</h1>
 
+        <PostInsert />
+        
         <div className="post-panel">
           <h2>my post:</h2>
 
