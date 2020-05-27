@@ -29,7 +29,7 @@ class PostInsert extends Component{
 
                 </form>
             </div>
-        )
+        );
     }
 }
 
