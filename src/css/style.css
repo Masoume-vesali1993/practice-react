@@ -5,10 +5,22 @@ body{
 .post-panel{
     border: 2px #888 solid;
     background: #EEE;
+    box-sizing:  border-box;
+    overflow: hidden;
 }
 .post-panel h2{
     padding: 8px;
     margin: 0;
     background: lightblue;
     border-bottom:  double #888;
+}
+.post-panel .post{
+    background: #fff;
+    margin: 5px;
+    padding:  0 5px;
+}
+.post-panel .post h3{
+    text-align: left;
+    background: lightgreen;
+    border: 1px solid #444;
 }
