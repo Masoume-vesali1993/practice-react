@@ -5,7 +5,7 @@ class PostInsert extends Component{
     onPostCreate = (e) => {
         e.preventDefult();
         let form = e.target;
-        console.log(form.lements);
+        console.log(form.lements.title);
         return;
         let post = {title: 'new', body: 'all'};
         this.props.onPostCreate(post);
