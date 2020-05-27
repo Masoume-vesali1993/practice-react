@@ -6,3 +6,9 @@ body{
     border: 1px #888 solid;
     background: #EEE;
 }
+.post-panel h2{
+    padding: 8px;
+    margin: 0;
+    background: lightblue;
+    border-bottom:  double #888;
+}
