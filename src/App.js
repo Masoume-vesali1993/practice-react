@@ -13,19 +13,26 @@ class App extends Component {
   titleInput = null;
   bodyInput = null;
 
-  addNewPost= () =>{
-    let post = {
-      id: this.state.posts[this.state.posts.length -1].id +1,
-      title : this.titleInput.value,
-      body : this.bodyInput.value,
-    }
-    console.log(post);
+  addNewPost= () => {  
+    this.setState((oldState, props) => (
+        {
+        ...oldState,
+        posts: [
+          ...oldState.posts,
+        {
+          id: oldState.posts[oldState.posts.length -1].id +1,
+          title : this.titleInput.value,
+          body : this.bodyInput.value,
+        }
+       ]
+      }
+    ));
   }
 
   render(){
     return (
       <div>
-
+        <h1>Add New post title</h1>
         <div className="new-post">
           <input placeholder="enter the post title" ref={el => this.titleInput = el} />
           <textarea placeholder="enter the post body" ref={el => this.bodyInput = el}/>
@@ -34,6 +41,7 @@ class App extends Component {
         </div>
 
         <div className="blog">
+          <h1>Blog Posts</h1>
           {this.state.posts.map(post => (
             <div key={post.id} className="post">
               <h3>{post.title}</h3>
