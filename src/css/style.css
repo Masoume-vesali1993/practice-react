@@ -1,4 +1,16 @@
 .blog{
     margin: 10px;
-    background: lightskyblue;
+    background: #fff;
+}
+
+.blog .post{
+    border: 1px solid #888;
+    padding: 10px;
+    margin-bottom: 8px;
+}
+
+.blog .post h3{
+    padding: 5px;
+    margin:0;
+    border-bottom: 1px solid #888;
 }
