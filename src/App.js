@@ -10,16 +10,27 @@ class App extends Component {
     ]
   }
   
+  titleInput = null;
+  bodyInput = null;
+
+  addNewPost= () =>{
+    let post = {
+      id: this.state.posts[this.state.posts.length -1].id +1,
+      title : this.titleInput.value,
+      body : this.bodyInput.value,
+    }
+    console.log(post);
+  }
 
   render(){
     return (
       <div>
 
         <div className="new-post">
-          <input placeholder="enter the post title" />
-          <textarea placeholder="enter the post body" />
+          <input placeholder="enter the post title" ref={el => this.titleInput = el} />
+          <textarea placeholder="enter the post body" ref={el => this.bodyInput = el}/>
 
-          <button>Add new post</button>
+          <button onClick={this.addNewPost}>Add new post</button>
         </div>
 
         <div className="blog">
