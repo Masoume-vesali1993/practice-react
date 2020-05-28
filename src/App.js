@@ -13,7 +13,15 @@ class App extends Component {
 
   render(){
     return (
-      <div> 
+      <div>
+
+        <div className="new-post">
+          <input placeholder="enter the post title" />
+          <textarea placeholder="enter the post body" />
+
+          <button>Add new post</button>
+        </div>
+
         <div className="blog">
           {this.state.posts.map(post => (
             <div key={post.id} className="post">
