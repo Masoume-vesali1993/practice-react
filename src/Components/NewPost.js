@@ -23,7 +23,7 @@ class NewPost extends Component {
             <input placeholder="enter the post title" ref={el => this.titleInput = el} />
             <textarea placeholder="enter the post body" ref={el => this.bodyInput = el}/>
   
-            <button onClick={this.addNewPost}>Add new post</button>
+            <button onClick={this.handleAddButtonClick}>Add new post</button>
         </div>
         );
     }
