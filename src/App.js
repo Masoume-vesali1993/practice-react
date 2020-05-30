@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Post from './Components/Post';
 import addNewPost from './Components/NewPost';
 import NewPost from './Components/NewPost';
+import Blog from './Components/Blog';
 
 
 class App extends Component {
@@ -14,35 +14,30 @@ class App extends Component {
   
 
   addNewPost= (post) => {  
-    this.setState((oldState, props) => (
-        {
-        ...oldState,
-        posts: [
-          ...oldState.posts,
+    this.setState((oldState, props) => {
+      console.log(oldState);
+        let newState = {
+          ...oldState,
+          posts: [
+            ...oldState.posts,
 
-          {
-            id: oldState.posts[oldState.posts.length -1].id +1,
-            ...post
-          }
+            {
+              id: oldState.posts[oldState.posts.length -1].id +1,
+              ...post
+            }
+        ]
+      };
+      console.log(newState);
 
-       ]
-      }
-    ));
+      return newState;
+    });
   }
 
   render(){
     return (
       <div>
-
         <NewPost onPostCreated={this.addNewPost} />
-
-        <div className="blog">
-          <h1>Blog Posts</h1>
-          {this.state.posts.map(post => (
-            <Post key={post.id} {...post} />
-          ))
-          }
-        </div>
+        <Blog posts={this.state.posts} />
       </div>
     );
   }
