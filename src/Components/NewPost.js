@@ -8,11 +8,18 @@ class NewPost extends Component {
 
     handleAddButtonClick = () => {
         let post = {
-            body : this.bodyInput.value,
-            title : this.titleInput.value,
+            body : this.bodyInput.value.trim(),
+            title : this.titleInput.value.trim(),
         };
 
-        this.props.onPostCreated(post);
+        if(post.title.length && post.body.length ){
+            this.titleInput.value = '';
+            this.bodyInput.value = '';
+            this.props.onPostCreated(post);
+        }
+        else{
+                alert('please enter both inguts');
+        }
     }
 
     render() {
