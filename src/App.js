@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Post from './Components/Post';
+import addNewPost from './Components/NewPost';
+import NewPost from './Components/NewPost';
 
 
 class App extends Component {
@@ -10,20 +12,20 @@ class App extends Component {
     ]
   }
   
-  titleInput = null;
-  bodyInput = null;
+  
 
-  addNewPost= () => {  
+  addNewPost= (post) => {  
     this.setState((oldState, props) => (
         {
         ...oldState,
         posts: [
           ...oldState.posts,
-        {
-          id: oldState.posts[oldState.posts.length -1].id +1,
-          title : this.titleInput.value,
-          body : this.bodyInput.value,
-        }
+
+          {
+            id: oldState.posts[oldState.posts.length -1].id +1,
+            ...post
+          }
+
        ]
       }
     ));
@@ -32,13 +34,8 @@ class App extends Component {
   render(){
     return (
       <div>
-        <h1>Add New post title</h1>
-        <div className="new-post">
-          <input placeholder="enter the post title" ref={el => this.titleInput = el} />
-          <textarea placeholder="enter the post body" ref={el => this.bodyInput = el}/>
 
-          <button onClick={this.addNewPost}>Add new post</button>
-        </div>
+        <NewPost onPostCreated={this.addNewPost} />
 
         <div className="blog">
           <h1>Blog Posts</h1>
