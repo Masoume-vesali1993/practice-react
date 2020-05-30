@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import Post from './Components/Post';
 
 
 class App extends Component {
@@ -43,10 +43,7 @@ class App extends Component {
         <div className="blog">
           <h1>Blog Posts</h1>
           {this.state.posts.map(post => (
-            <div key={post.id} className="post">
-              <h3>{post.title}</h3>
-              <p>{post.body}</p>
-            </div>
+            <Post key={post.id} {...post} />
           ))
           }
         </div>
