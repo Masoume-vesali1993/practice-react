@@ -36,6 +36,16 @@ class App extends Component {
   render(){
     return (
       <div>
+        
+        <header>
+          <nav className="navication">
+            <ul>
+              <li> <a href="./new-post">New Post</a> </li>
+              <li> <a href="./blog">Blog</a> </li>
+            </ul>
+          </nav>
+        </header>
+
         <NewPost onPostCreated={this.addNewPost} />
         <Blog posts={this.state.posts} />
       </div>

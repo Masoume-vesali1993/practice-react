@@ -39,3 +39,29 @@
     font-weight: bold;
     border: solid #448;
 }
+.navication{
+    border-bottom:1px solid #888;
+}
+.navication ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.navication ul li{
+    list-style: none;
+    display: inline-block;
+    border: 1px solid #448;
+    margin: 5px;
+}
+.navication ul li a{
+    padding: 12px 15px;
+    display: block;
+    background: #EEE;
+    text-decoration: none;
+}
+.navication ul li a:hover,
+.navication ul li a:focus
+{
+
+    background: #fff;
+}
