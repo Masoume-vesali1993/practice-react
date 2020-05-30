@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import addNewPost from './Components/NewPost';
 import NewPost from './Components/NewPost';
 import Blog from './Components/Blog';
+import Navbar from './Components/NavBar';
 
 
 class App extends Component {
@@ -37,15 +38,7 @@ class App extends Component {
     return (
       <div>
         
-        <header>
-          <nav className="navication">
-            <ul>
-              <li> <a href="./new-post">New Post</a> </li>
-              <li> <a href="./blog">Blog</a> </li>
-            </ul>
-          </nav>
-        </header>
-
+        <Navbar />
         <NewPost onPostCreated={this.addNewPost} />
         <Blog posts={this.state.posts} />
       </div>
