@@ -40,7 +40,7 @@ class App extends Component {
         <BrowserRouter>
           <div>
             <Route path="/" component={Navbar} />
-            <Route path="/new-post" component={NewPost} onPostCreated={this.addNewPost} />
+            <Route path="/new-post" render={(props) => <NewPost {...props} onPostCreated={this.addNewPost} />} />
             <Route path="/blog" render={(props) => <Blog {...props} posts={this.state.posts} /> } />
           </div>
         </BrowserRouter>
