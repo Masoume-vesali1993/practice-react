@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
+
 import addNewPost from './Components/NewPost';
 import NewPost from './Components/NewPost';
 import Blog from './Components/Blog';
@@ -37,10 +39,11 @@ class App extends Component {
   render(){
     return (
       <div>
-        
-        <Navbar />
-        <NewPost onPostCreated={this.addNewPost} />
-        <Blog posts={this.state.posts} />
+        <BrowserRouter>
+          <Navbar />
+          <NewPost onPostCreated={this.addNewPost} />
+          <Blog posts={this.state.posts} />
+        </BrowserRouter>
       </div>
     );
   }
