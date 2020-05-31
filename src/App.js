@@ -40,7 +40,7 @@ class App extends Component {
     return (
         <BrowserRouter>
           <div>
-            <Route path="/" render={() => <Navbar />} />
+            <Route path="/" component={Navbar} />
             <Route path="/" exact render={() => <h1>home page</h1>} />
             <Route path="/user" render={() => <h1>user page</h1>} />
             <Route path="/user" render={() => <h2>some text</h2>} />
