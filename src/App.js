@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter,Route } from 'react-router-dom';
 
 import addNewPost from './Components/NewPost';
 import NewPost from './Components/NewPost';
@@ -38,13 +38,15 @@ class App extends Component {
 
   render(){
     return (
-      <div>
         <BrowserRouter>
-          <Navbar />
-          <NewPost onPostCreated={this.addNewPost} />
-          <Blog posts={this.state.posts} />
+          <div>
+            <Route path="/" exact render={() => <h1>home page</h1>} />
+            <Route path="/user" render={() => <h1>user page</h1>} />
+            {/* <Navbar />
+            <NewPost onPostCreated={this.addNewPost} />
+            <Blog posts={this.state.posts} /> */}
+          </div>
         </BrowserRouter>
-      </div>
     );
   }
 }
