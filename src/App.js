@@ -42,6 +42,7 @@ class App extends Component {
           <div>
             <Route path="/" exact render={() => <h1>home page</h1>} />
             <Route path="/user" render={() => <h1>user page</h1>} />
+            <Route path="/user" render={() => <h2>some text</h2>} />
             {/* <Navbar />
             <NewPost onPostCreated={this.addNewPost} />
             <Blog posts={this.state.posts} /> */}
