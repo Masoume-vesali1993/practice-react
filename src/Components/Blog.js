@@ -10,7 +10,11 @@ class Blog extends Component {
             <div className="blog">
             <h1>Blog Posts</h1>
             {this.props.posts.map(post => (
-                <Post key={post.id} {...post} />
+                <Post 
+                key={post.id} 
+                {...post} 
+                match={this.props.match}
+                />
             ))
             }
             </div>
