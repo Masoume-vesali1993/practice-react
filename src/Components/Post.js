@@ -2,7 +2,7 @@ import React, { component, Component } from 'react';
 
 class Post extends Component {
     render() {
-        // console.log(this.props);
+        console.log('[post]',this.props);
         return (
             <div className="post">
               <h3>{this.props.title}</h3>
