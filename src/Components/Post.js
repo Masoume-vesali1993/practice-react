@@ -1,4 +1,5 @@
 import React, { component, Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class Post extends Component {
     render() {
@@ -12,4 +13,4 @@ class Post extends Component {
     }
 }
 
-export default Post;
+export default withRouter(Post);
