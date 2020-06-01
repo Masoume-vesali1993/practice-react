@@ -3,6 +3,7 @@ import { BrowserRouter,Route } from 'react-router-dom';
 
 import NewPost from './Components/NewPost';
 import Blog from './Components/Blog';
+
 import Navbar from './Components/NavBar';
 
 
