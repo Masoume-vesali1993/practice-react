@@ -5,6 +5,7 @@ import Post from './Post';
 
 class Blog extends Component {
     render() {
+        console.log('[blog]',this.props);
         return(
             <div className="blog">
             <h1>Blog Posts</h1>
