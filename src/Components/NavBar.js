@@ -7,7 +7,11 @@ class Navbar extends Component {
             <header>
                 <nav className="navication">
                 <ul>
-                    <li> <Link to="/new-post">New Post</Link> </li>
+                    <li> <Link to={{
+                        pathname:"/new-post",
+                        hash: '#foo',
+                        search: '?x=26'
+                    }}>New Post</Link> </li>
                     <li> <Link to="/blog">Blog</Link> </li>
                 </ul>
             </nav>
