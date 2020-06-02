@@ -2,11 +2,10 @@ import React, { Component } from 'react';
 
 class SinglePost extends Component {
     render() {
-        console.log(this.props);
         return (
             <div className="single-post">
-                <h3>{this.props.title}</h3>
-                <p>{this.props.body}</p>
+                <h3>{this.props.post.title}</h3>
+                <p>{this.props.post.body}</p>
             </div>
         );
     }
