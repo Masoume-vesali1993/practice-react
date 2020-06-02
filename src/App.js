@@ -6,6 +6,8 @@ import Blog from './Components/Blog';
 
 import Navbar from './Components/NavBar';
 
+import SinglePost from './Components/SinglePost';
+
 
 class App extends Component {
   state = {
@@ -45,7 +47,7 @@ class App extends Component {
             <Route path="/" component={Navbar} />
             <Route path="/new-post" render={(props) => <NewPost {...props} onPostCreated={this.addNewPost} />} />
             <Route path="/blog" exact render={(props) => <Blog {...props} posts={this.state.posts} x={true} /> } />
-            <Route path="/blog/:id" render={(props) => <singlePost id={props.match.params.id}> } />
+            <Route path="/blog/:id" render={(props) => <singlePost id={props.match.params.id} /> } />
           </div>
         </BrowserRouter>
     );
