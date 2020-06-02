@@ -5,14 +5,11 @@ class Post extends Component {
     render() {
         console.log(this.props);
         return (
-            <Link to={{
-                pathname: "/blog"
-            }}>
-                <div className="post">
-                <h3>{this.props.title}</h3>
+            <div className="post">
+                <Link to={{ pathname: this.props.match.path + "/" + this.props.id}}> <h3>{this.props.title}</h3>
+                </Link>
                 <p>{this.props.body}</p>
-                </div>
-            </Link>
+            </div>
         );
     }
 }
