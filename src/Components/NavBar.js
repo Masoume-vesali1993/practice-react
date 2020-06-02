@@ -1,5 +1,5 @@
 import React,{ Component } from "react";
-import {Link} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 class Navbar extends Component {
     render(){
@@ -7,12 +7,12 @@ class Navbar extends Component {
             <header>
                 <nav className="navication">
                 <ul>
-                    <li> <Link to={{
+                    <li> <NavLink to={{
                         pathname:"/new-post",
                         hash: '#foo',
                         search: '?x=26'
-                    }}>New Post</Link> </li>
-                    <li> <Link to="/blog">Blog</Link> </li>
+                    }}>New Post</NavLink> </li>
+                    <li> <NavLink to="/blog">Blog</NavLink> </li>
                 </ul>
             </nav>
           </header>
