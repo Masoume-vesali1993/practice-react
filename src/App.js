@@ -45,9 +45,7 @@ class App extends Component {
             <Route path="/" component={Navbar} />
             <Route path="/new-post" render={(props) => <NewPost {...props} onPostCreated={this.addNewPost} />} />
             <Route path="/blog" exact render={(props) => <Blog {...props} posts={this.state.posts} x={true} /> } />
-            <Route path="/blog/1" render={(props) => <div>post 1</div>} />
-            <Route path="/blog/2" render={(props) => <div>post 2</div>} />
-            <Route path="/blog/3" render={(props) => <div>post 3</div>} />
+    <Route path="/blog/:id" render={(props) => <div>post {props.match.params.id}</div> } />
           </div>
         </BrowserRouter>
     );
