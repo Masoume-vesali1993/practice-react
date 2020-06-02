@@ -1,5 +1,4 @@
 import React, { component, Component } from 'react';
-import { withRouter,Link } from 'react-router-dom';
 
 class SinglePost extends Component {
     render() {
@@ -14,4 +13,4 @@ class SinglePost extends Component {
     }
 }
 
-export default withRouter(SinglePost;
+export default SinglePost;
