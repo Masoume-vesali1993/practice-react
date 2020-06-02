@@ -41,9 +41,7 @@ class App extends Component {
   }
 
   findPostById = (postId) => {
-    let post = this.state.posts.filter(post => post.id == postId);
-    console.log( postId , post );
-    return post;
+    return this.state.posts.filter(post => post.id === parseInt(postId));
   }
 
   render(){
