@@ -23,6 +23,7 @@ class NewPost extends Component {
     }
 
     render() {
+        console.log('[NewPost]',this.props);
         return (
         <div className="new-post">
             <h1>Add New post title</h1>

@@ -3,7 +3,7 @@ import { withRouter,Link } from 'react-router-dom';
 
 class Post extends Component {
     render() {
-        console.log(this.props);
+        console.log('[post]',this.props);
         return (
             <div className="post">
                 <Link to={{ pathname: this.props.match.path + "/" + this.props.id}}> <h3>{this.props.title}</h3>

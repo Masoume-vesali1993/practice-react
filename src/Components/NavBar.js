@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 class Navbar extends Component {
     render(){
+        console.log('[NavBar]',this.props);
         return (
             <header>
                 <nav className="navication">
