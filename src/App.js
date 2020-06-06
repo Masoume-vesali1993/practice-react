@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter,Route, Switch } from 'react-router-dom';
+import { BrowserRouter,Route, Switch, Redirect } from 'react-router-dom';
 
 import NewPost from './Components/NewPost';
 import Blog from './Components/Blog';
@@ -56,6 +56,8 @@ class App extends Component {
               <Route path="/blog" exact render={(props) => <Blog {...props} posts={this.state.posts} x={true} /> } />
               <Route path="/blog/list" render={(props) => <h1>blog list</h1> } />
               <Route path="/blog/:id" render={(props) => <SinglePost post={this.findPostById(props.match.params.id)} /> } />
+
+              <Redirect to="/" />
             </Switch>
           </div>
         </BrowserRouter>
