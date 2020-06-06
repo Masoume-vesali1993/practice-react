@@ -15,7 +15,8 @@ class App extends Component {
       {id:1, title: 'post 1', body: 'post 1 body'},
       {id:2, title: 'post 2', body: 'post 2 body'},
       {id:3, title: 'post 3', body: 'post 3 body'},
-    ]
+    ],
+    auth:null
   }
   
   
@@ -54,7 +55,13 @@ class App extends Component {
             <Switch>
               <Route path="/new-post" render={(props) => <NewPost {...props} onPostCreated={this.addNewPost} />} />
               <Route path="/blog" exact render={(props) => <Blog {...props} posts={this.state.posts} x={true} /> } />
-              <Route path="/blog/list" render={(props) => <h1>blog list</h1> } />
+
+                {
+                  this.state.auth
+                    ? <Route path="/blog/list" render={(props) => <h1>blog list</h1> } />
+                      : <Redirect from="/blog/list" to="/blog" />
+                }
+
               <Route path="/blog/:id" render={(props) => <SinglePost post={this.findPostById(props.match.params.id)} /> } />
 
               <Redirect to="/" />
