@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 
 class SinglePost extends Component {
     render() {
-        console.log('[Single-post]');
+        console.log('[Single-post]', this.props);
         if(this.props.post){
             return (
                 <div className="single-post">
@@ -17,4 +18,4 @@ class SinglePost extends Component {
     }
 }
 
-export default SinglePost;
+export default withRouter (SinglePost);
