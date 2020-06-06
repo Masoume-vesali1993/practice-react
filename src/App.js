@@ -54,6 +54,8 @@ class App extends Component {
 
             <Switch>
               <Route path="/new-post" render={(props) => <NewPost {...props} onPostCreated={this.addNewPost} />} />
+              <Redirect from="/create-post" to="/new-post" />
+              
               <Route path="/blog" exact render={(props) => <Blog {...props} posts={this.state.posts} x={true} /> } />
 
                 {
