@@ -16,6 +16,12 @@ class SinglePost extends Component {
             return null;
         }
     }
+
+    componentDidMount(){
+        if(!this.props.post){
+            this.props.history.push('/blog');
+        }
+    }
 }
 
 export default withRouter (SinglePost);
