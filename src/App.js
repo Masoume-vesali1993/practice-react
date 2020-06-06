@@ -16,7 +16,7 @@ class App extends Component {
       {id:2, title: 'post 2', body: 'post 2 body'},
       {id:3, title: 'post 3', body: 'post 3 body'},
     ],
-    auth:null
+    auth: {name:'Masoume'}
   }
   
   
@@ -55,7 +55,7 @@ class App extends Component {
             <Switch>
               <Route path="/new-post" render={(props) => <NewPost {...props} onPostCreated={this.addNewPost} />} />
               <Redirect from="/create-post" to="/new-post" />
-              
+
               <Route path="/blog" exact render={(props) => <Blog {...props} posts={this.state.posts} x={true} /> } />
 
                 {
