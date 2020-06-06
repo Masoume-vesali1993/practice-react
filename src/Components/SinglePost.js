@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Redirect } from 'react-router-dom';
 
 class SinglePost extends Component {
     render() {
@@ -13,15 +13,15 @@ class SinglePost extends Component {
             );
         }
         else{
-            return null;
+            return <Redirect to="/blog" />;
         }
     }
 
-    componentDidMount(){
-        if(!this.props.post){
-            this.props.history.push('/blog');
-        }
-    }
+    // componentDidMount(){
+    //     if(!this.props.post){
+    //         this.props.history.push('/blog');
+    //     }
+    // }
 }
 
 export default withRouter (SinglePost);
