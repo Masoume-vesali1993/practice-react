@@ -73,15 +73,22 @@ class App extends Component {
   componentDidMount(){
     axios
     .get('http://jsonplaceholder.typicode.com/posts')
-    .then(function(data){
+    .then(function(response){
+      let data = response.data.map(item => (
+        {
+          id: item.id,
+          title: item.title,
+          body: item.body
+          }
+      ));
+
       console.log(data);
     })
     .catch(function(err){
       alert(err);
       console.log(err);
-    });
-  }
-
-}
+      });
+   }
+ }
 
 export default App;
