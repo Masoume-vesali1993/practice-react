@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter,Route, Switch, Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 import NewPost from './Components/NewPost';
 import Blog from './Components/Blog';
@@ -11,11 +12,7 @@ import SinglePost from './Components/SinglePost';
 
 class App extends Component {
   state = {
-    posts: [
-      {id:1, title: 'post 1', body: 'post 1 body'},
-      {id:2, title: 'post 2', body: 'post 2 body'},
-      {id:3, title: 'post 3', body: 'post 3 body'},
-    ],
+    posts: [],
     auth: {name:'Masoume'}
   }
   
@@ -72,7 +69,19 @@ class App extends Component {
         </BrowserRouter>
     );
   }
-  
+
+  componentDidMount(){
+    axios
+    .get('http://jsonplaceholder.typicode.com/posts')
+    .then(function(data){
+      console.log(data);
+    })
+    .catch(function(err){
+      alert(err);
+      console.log(err);
+    });
+  }
+
 }
 
 export default App;
