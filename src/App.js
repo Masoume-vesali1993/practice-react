@@ -82,7 +82,12 @@ class App extends Component {
           }
       ));
 
-      console.log(data);
+      this.setState((oldState, props) => {
+        return {
+          ...oldState,
+          posts:data
+        };
+      });
     })
     .catch(function(err){
       alert(err);
