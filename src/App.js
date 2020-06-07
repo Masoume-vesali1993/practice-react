@@ -73,7 +73,7 @@ class App extends Component {
   componentDidMount(){
     axios
     .get('http://jsonplaceholder.typicode.com/posts')
-    .then(function(response){
+    .then((response) => {
       let data = response.data.map(item => (
         {
           id: item.id,
@@ -89,7 +89,7 @@ class App extends Component {
         };
       });
     })
-    .catch(function(err){
+    .catch((err) => {
       alert(err);
       console.log(err);
       });
