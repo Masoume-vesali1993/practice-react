@@ -61,7 +61,7 @@ class App extends Component {
                       : <Redirect from="/blog/list" to="/blog" />
                 }
 
-              <Route path="/blog/:id" render={(props) => <SinglePost post={this.findPostById(props.match.params.id)} /> } />
+              <Route path="/blog/:id" render={(props) => <SinglePost id={props.match.params.id} /> } />
 
               <Redirect to="/" />
             </Switch>
