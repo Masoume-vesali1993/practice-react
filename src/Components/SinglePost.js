@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
 
 class SinglePost extends Component {
+    state = {
+        post:null
+    }
+
     render() {
-        console.log('[Single-post]', this.props);
-        if(this.props.post){
+        if(this.state.post){
             return (
                 <div className="single-post">
                     <h3>{this.props.post.title}</h3>
@@ -13,7 +16,7 @@ class SinglePost extends Component {
             );
         }
         else{
-            return <Redirect to="/blog" />;
+            return 'dont file';
         }
     }
 
