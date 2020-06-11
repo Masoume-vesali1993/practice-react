@@ -38,10 +38,10 @@ class App extends Component {
     });
   }
 
-  findPostById = (postId) => {
-    let posts = this.state.posts.filter(post => post.id === parseInt(postId));
-    return posts.length ? posts[0] : null;
-  }
+  // findPostById = (postId) => {
+  //   let posts = this.state.posts.filter(post => post.id === parseInt(postId));
+  //   return posts.length ? posts[0] : null;
+  // }
 
   render(){
     return (
