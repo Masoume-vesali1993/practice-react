@@ -30,13 +30,17 @@ class SinglePost extends Component {
                     title: response.data.id,
                     body: response.data.body,
                 }
+
+                setTimeout(() =>{
+                    this.setState(oldState => {
+                        return {
+                            ...oldState,
+                                post
+                        };
+                    });
+                },2000);
                 
-                this.setState(oldState => {
-                    return {
-                        ...oldState,
-                            post
-                    };
-                });
+               
             })
             .catch(err => {
                 console.log(err);
