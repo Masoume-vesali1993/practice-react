@@ -23,7 +23,7 @@ class SinglePost extends Component {
 
     componentDidMount(){
             axios
-            .get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+            .get('https://jsonplaceholder.typicode.com/postsd/' + this.props.id)
             .then(response => {
                 let post = {
                     id: response.data.id,
@@ -43,6 +43,7 @@ class SinglePost extends Component {
                
             })
             .catch(err => {
+                alert(err);
                 console.log(err);
             })
         }
