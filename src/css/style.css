@@ -69,3 +69,10 @@
 .navication ul li a.active{
     background: lightgreen;
 }
+.loding{
+    background-image:url(/loading.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width: 80px;
+    height: 80px;
+}

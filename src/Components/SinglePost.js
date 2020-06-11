@@ -17,7 +17,7 @@ class SinglePost extends Component {
             );
         }
         else{
-            return 'dont file';
+            return <p className="loding"></p>;
         }
     }
 
