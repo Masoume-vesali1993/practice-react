@@ -11,8 +11,8 @@ class SinglePost extends Component {
         if(this.state.post){
             return (
                 <div className="single-post">
-                    <h3>{this.props.post.title}</h3>
-                    <p>{this.props.post.body}</p>
+                    <h3>{this.state.post.title}</h3>
+                    <p>{this.state.post.body}</p>
                 </div>
             );
         }
@@ -25,7 +25,18 @@ class SinglePost extends Component {
             axios
             .get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
             .then(response => {
-                console.log(response);
+                let post = {
+                    id: response.data.id,
+                    title: response.data.id,
+                    body: response.data.body,
+                }
+                
+                this.setState(oldState => {
+                    return {
+                        ...oldState,
+                            post
+                    };
+                });
             })
             .catch(err => {
                 console.log(err);
