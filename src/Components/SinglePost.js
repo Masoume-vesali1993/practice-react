@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
+import axios from 'axios';
 
 class SinglePost extends Component {
     state = {
@@ -21,7 +22,14 @@ class SinglePost extends Component {
     }
 
     componentDidMount(){
-
+            axios
+            .get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err => {
+                console.log(err);
+            })
         }
     }
 
