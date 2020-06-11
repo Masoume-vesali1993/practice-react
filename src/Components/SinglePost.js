@@ -17,11 +17,9 @@ class SinglePost extends Component {
         }
     }
 
-    // componentDidMount(){
-    //     if(!this.props.post){
-    //         this.props.history.push('/blog');
-    //     }
-    // }
-}
+    componentDidMount(){
+
+        }
+    }
 
 export default withRouter (SinglePost);
