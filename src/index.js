@@ -5,6 +5,7 @@ import './css/style.css';
 import * as serviceWorker from './serviceWorker';
 import axios from 'axios';
 
+axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
 axios.interceptors.request.use(
   request => {
     request.headers['Foo'] = 'bar';
