@@ -3,6 +3,31 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import './css/style.css';
 import * as serviceWorker from './serviceWorker';
+import axios from 'axios';
+
+axios.interceptors.request.use(
+  request => {
+    console.log('[request interceptor :: success]' , request);
+    return request;
+  }
+  ,
+  error => {
+    console.log('[request interceptor :: error]' , error);
+    return Promise.reject(error);
+  }
+)
+
+axios.interceptors.response.use(
+  response => {
+    console.log('[response interceptor :: success]' , response);
+    return response;
+  }
+  ,
+  error => {
+    console.log('[response interceptor :: error]' , error);
+    return Promise.reject(error);
+  }
+)
 
 ReactDOM.render(
   <React.StrictMode>
