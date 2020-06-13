@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 
 
 
@@ -10,12 +11,24 @@ class NewPost extends Component {
         let post = {
             body : this.bodyInput.value.trim(),
             title : this.titleInput.value.trim(),
+            userId: 1
         };
 
         if(post.title.length && post.body.length ){
-            this.titleInput.value = '';
-            this.bodyInput.value = '';
-            this.props.onPostCreated(post);
+            // this.titleInput.value = '';
+            // this.bodyInput.value = '';
+
+            console.log(post);
+
+            axios.post('https://jsonplacholder/typicode.com/posts', post)
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err => {
+                console.log(err);
+            })
+
+            // this.props.onPostCreated(post);
         }
         else{
                 alert('please enter both inguts');
