@@ -23,7 +23,7 @@ class SinglePost extends Component {
 
     componentDidMount(){
             axios
-            .get('https://jsonplaceholder.typicode.com/posts/' + this.props.id)
+            .get('/posts/' + this.props.id)
             .then(response => {
                 let post = {
                     id: response.data.id,

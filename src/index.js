@@ -8,6 +8,7 @@ import axios from 'axios';
 axios.interceptors.request.use(
   request => {
     request.headers['Foo'] = 'bar';
+    request.url = 'https://jsonplaceholder.typicode.com' + request.url;
     console.log('[request interceptor :: success]' , request);
     return request;
   }

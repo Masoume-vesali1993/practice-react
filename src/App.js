@@ -72,7 +72,7 @@ class App extends Component {
 
   componentDidMount(){
     axios
-    .get('http://jsonplaceholder.typicode.com/posts')
+    .get('/posts')
     .then((response) => {
       let data = response.data.slice(0,5).map(item => (
         {
