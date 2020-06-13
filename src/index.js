@@ -7,6 +7,7 @@ import axios from 'axios';
 
 axios.interceptors.request.use(
   request => {
+    request.headers['Foo'] = 'bar';
     console.log('[request interceptor :: success]' , request);
     return request;
   }
