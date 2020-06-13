@@ -7,7 +7,9 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'https://jsonplaceholder.typicode.com';
 axios.defaults.timeout = 1000;
-
+axios.defaults.headers.common['XY_'] ='MASVSL';
+axios.defaults.headers.get['XYZ'] =15;
+axios.defaults.headers.post['XYZ'] =16;
 
 axios.interceptors.request.use(
   request => {
