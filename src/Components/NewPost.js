@@ -24,6 +24,7 @@ class NewPost extends Component {
             axios.post('https://jsonplaceholder.typicode.com/posts', post)
             .then(response => {
                 this.props.onPostCreated(post);
+                this.props.history.push('./blog');
             })
             .catch(err => {
                 console.log(err);
