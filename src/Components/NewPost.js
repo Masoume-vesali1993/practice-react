@@ -21,7 +21,13 @@ class NewPost extends Component {
 
             console.log(post);
 
-            axios.post('https://jsonplaceholder.typicode.com/posts', post)
+            axios({
+                method: 'post',
+                url: 'https://jsonplaceholder.typicode.com/posts',
+                data:post
+            })
+            
+            .post('https://jsonplaceholder.typicode.com/posts', post)
             .then(response => {
                 this.props.onPostCreated(post);
                 this.props.history.push('./blog');
