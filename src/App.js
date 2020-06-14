@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { BrowserRouter,Route, Switch, Redirect } from 'react-router-dom';
-import axios from 'axios';
+import axios from './requests/axios-for-jsonplaceholder';
 
 import NewPost from './Components/NewPost';
+
 import Blog from './Components/Blog';
 
 import Navbar from './Components/NavBar';
