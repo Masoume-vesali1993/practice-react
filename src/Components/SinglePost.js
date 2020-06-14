@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { withRouter, Redirect } from 'react-router-dom';
-import axios from 'axios';
+import axios from '../requests/axios-for-jsonplaceholder';
 
 class SinglePost extends Component {
     state = {
