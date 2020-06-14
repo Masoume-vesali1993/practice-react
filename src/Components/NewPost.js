@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import axios from '../requests/axios-for-jsonplaceholder';
 import {withRouter} from 'react-router-dom';
 
 
