@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import { act } from 'react-dom/test-utils';
 //1- set initial state
 const initState = {
     counter: 0
@@ -7,6 +8,13 @@ const initState = {
 //2- create a reducer
 const reducer = (state = initState, action) => {
     console.log(action);
+    if(action.type === 'INCREMENT' ){
+        return {
+            ...state,
+            counter: state.counter + 1
+        };
+    }
+    
     return state;
 }
 
