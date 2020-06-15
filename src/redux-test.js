@@ -27,5 +27,8 @@ console.log(store.getState());
 const incrementAction = {type: 'INCREMENT'};
 store.dispatch(incrementAction);
 
+const decrementActiion = {type:'DECREMENT'};
+store.dispatch(decrementActiion);
+
 //get store current store
 console.log(store.getState());
