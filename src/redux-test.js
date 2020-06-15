@@ -14,12 +14,14 @@ const reducer = (state = initState, action) => {
             counter: state.counter + 1
         };
     }
-    
+
     return state;
 }
 
 //3- create a store
 const store = createStore(reducer);
+console.log(store.getState());
+
 
 //4- create an action
 const incrementAction = {type: 'INCREMENT'};
