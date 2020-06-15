@@ -6,6 +6,7 @@ const initState = {
 
 //2- create a reducer
 const reducer = (state = initState, action) => {
+    console.log(action);
     return state;
 }
 
