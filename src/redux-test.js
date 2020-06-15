@@ -15,6 +15,10 @@ const reducer = (state = initState, action) => {
         };
     }
 
+    if(action.type === 'DECREMENT'){
+        return 12;
+    }
+
     return state;
 }
 
