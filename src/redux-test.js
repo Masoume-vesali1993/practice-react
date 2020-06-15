@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
 //1- set initial state
 const initState = {
-    name: 'Masoume'
+    counter: 0
 };
 
 //2- create a reducer
