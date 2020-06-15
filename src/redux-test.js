@@ -12,5 +12,9 @@ const reducer = (state = initState, action) => {
 //3- create a store
 const store = createStore(reducer);
 
+//4- create an action
+const incrementAction = {type: 'INCREMENT'};
+store.dispatch(incrementAction);
+
 //get store current store
 console.log(store.getState());
