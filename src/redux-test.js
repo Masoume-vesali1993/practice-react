@@ -16,7 +16,10 @@ const reducer = (state = initState, action) => {
     }
 
     if(action.type === 'DECREMENT'){
-        return 12;
+        return {
+            ...state,
+            counter: state.counter -1
+        };
     }
 
     return state;
@@ -30,6 +33,8 @@ console.log(store.getState());
 //4- create an action
 const incrementAction = {type: 'INCREMENT'};
 store.dispatch(incrementAction);
+
+console.log(store.getState());
 
 const decrementActiion = {type:'DECREMENT'};
 store.dispatch(decrementActiion);
