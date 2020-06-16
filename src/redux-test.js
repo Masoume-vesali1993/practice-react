@@ -49,5 +49,5 @@ store.dispatch(ARTactions.decrementActiion() );
 console.log(store.getState());
 
 
-store.dispatch(ARTactions.addAction() );
+store.dispatch(ARTactions.addAction(2) );
 console.log(store.getState());

@@ -7,4 +7,4 @@ export const incrementAction = () => ({type: INC_ACTION});
 
 export const decrementActiion = () => ({type:DEC_ACTION});
 
-export const addAction = () => ({type: ADD_ACTION , value: 10});
+export const addAction = (value = 1) => ({type: ADD_ACTION , value});
