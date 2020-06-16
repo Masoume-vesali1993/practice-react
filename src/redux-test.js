@@ -33,11 +33,12 @@ console.log(store.getState());
 //4- create an action
 const incrementAction = {type: 'INCREMENT'};
 store.dispatch(incrementAction);
-
 console.log(store.getState());
 
 const decrementActiion = {type:'DECREMENT'};
 store.dispatch(decrementActiion);
+console.log(store.getState());
 
-//get store current store
+const addAction = {type: 'ADD', value: 10};
+store.dispatch(addAction);
 console.log(store.getState());
