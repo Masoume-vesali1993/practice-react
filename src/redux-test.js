@@ -54,5 +54,7 @@ store.dispatch(ARTactions.decrementActiion() );
 store.dispatch(ARTactions.addAction(2) );
 
 
-store.dispatch(ARTactions.addAction(5) );
 
+setTimeout(() =>{
+    store.dispatch(ARTactions.addAction(5) );
+},5000)
