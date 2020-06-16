@@ -1,6 +1,6 @@
-const ADD_ACTION = 'ADD';
-const INC_ACTION = 'INCREMENT';
-const DEC_ACTION = 'DECREMENT';
+export const ADD_ACTION = 'ADD';
+export const INC_ACTION = 'INCREMENT';
+export const DEC_ACTION = 'DECREMENT';
 
 
 export const incrementAction = {type: INC_ACTION};
