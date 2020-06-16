@@ -41,13 +41,13 @@ console.log(store.getState());
 
 //4- create an action
 
-store.dispatch(ARTactions.incrementAction);
+store.dispatch(ARTactions.incrementAction() );
 console.log(store.getState());
 
 
-store.dispatch(ARTactions.decrementActiion);
+store.dispatch(ARTactions.decrementActiion() );
 console.log(store.getState());
 
 
-store.dispatch(ARTactions.addAction);
+store.dispatch(ARTactions.addAction() );
 console.log(store.getState());
