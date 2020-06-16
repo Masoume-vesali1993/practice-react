@@ -22,6 +22,13 @@ const reducer = (state = initState, action) => {
         };
     }
 
+    if(action.type === 'َADD'){
+        return {
+            ...state,
+            counter: state.counter + action.value
+        };
+    }
+
     return state;
 }
 
