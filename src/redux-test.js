@@ -1,8 +1,6 @@
 import { createStore } from 'redux';
 import { act } from 'react-dom/test-utils';
-import {addAction, decrementActiion, incrementAction,
-         ADD_ACTION,INC_ACTION,DEC_ACTION
-        } from './redux-test-action';
+import * as ARTactions from './redux-test-action';
 
 //1- set initial state
 const initState = {
@@ -12,21 +10,21 @@ const initState = {
 //2- create a reducer
 const reducer = (state = initState, action) => {
     console.log(action);
-    if(action.type === INC_ACTION ){
+    if(action.type === ARTactions.INC_ACTION ){
         return {
             ...state,
             counter: state.counter + 1
         };
     }
 
-    if(action.type === DEC_ACTION){
+    if(action.type === ARTactions.DEC_ACTION){
         return {
             ...state,
             counter: state.counter -1
         };
     }
 
-    if(action.type === ADD_ACTION){
+    if(action.type === ARTactions.ADD_ACTION){
         return {
             ...state,
             counter: state.counter + action.value
@@ -43,13 +41,13 @@ console.log(store.getState());
 
 //4- create an action
 
-store.dispatch(incrementAction);
+store.dispatch(ARTactions.incrementAction);
 console.log(store.getState());
 
 
-store.dispatch(decrementActiion);
+store.dispatch(ARTactions.decrementActiion);
 console.log(store.getState());
 
 
-store.dispatch(addAction);
+store.dispatch(ARTactions.addAction);
 console.log(store.getState());
