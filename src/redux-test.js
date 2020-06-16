@@ -38,6 +38,10 @@ const reducer = (state = initState, action) => {
 const store = createStore(reducer);
 console.log(store.getState());
 
+//5- Listen to changes 
+store.subscribe(() => {
+    console.log(store.getState());
+});
 
 //4- create an action
 
@@ -52,7 +56,3 @@ store.dispatch(ARTactions.addAction(2) );
 
 store.dispatch(ARTactions.addAction(5) );
 
-//5- Listen to changes 
-store.subscribe(() => {
-    console.log(store.getState());
-});
