@@ -39,8 +39,9 @@ const store = createStore(reducer);
 console.log(store.getState());
 
 //5- Listen to changes 
-store.subscribe(() => {
+store.subscribe((...args) => {
     console.log('[inside subscriber]', store.getState());
+    console.log(args)
 });
 
 //4- create an action
