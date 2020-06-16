@@ -40,7 +40,7 @@ console.log(store.getState());
 
 //5- Listen to changes 
 store.subscribe(() => {
-    console.log(store.getState());
+    console.log('[inside subscriber]', store.getState());
 });
 
 //4- create an action
