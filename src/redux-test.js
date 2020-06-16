@@ -8,7 +8,7 @@ const initState = {
 //2- create a reducer
 const reducer = (state = initState, action) => {
     console.log(action);
-    if(action.type === 'INCREMNT' ){
+    if(action.type === 'INCREMENT' ){
         return {
             ...state,
             counter: state.counter + 1
