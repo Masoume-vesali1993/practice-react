@@ -1,5 +1,7 @@
 import { createStore } from 'redux';
 import { act } from 'react-dom/test-utils';
+import {addAction, decrementActiion, incrementAction } from './redux-test-action';
+
 //1- set initial state
 const initState = {
     counter: 0

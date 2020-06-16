@@ -1,5 +1,5 @@
-const incrementAction = {type: 'INCREMENT'};
+export const incrementAction = {type: 'INCREMENT'};
 
-const decrementActiion = {type:'DECREMENT'};
+export const decrementActiion = {type:'DECREMENT'};
 
-const addAction = {type: 'ADD', value: 10};
+export const addAction = {type: 'ADD', value: 10};
