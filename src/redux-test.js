@@ -42,16 +42,12 @@ console.log(store.getState());
 //4- create an action
 
 store.dispatch(ARTactions.incrementAction() );
-console.log(store.getState());
 
 
 store.dispatch(ARTactions.decrementActiion() );
-console.log(store.getState());
 
 
 store.dispatch(ARTactions.addAction(2) );
-console.log(store.getState());
 
 
 store.dispatch(ARTactions.addAction(5) );
-console.log(store.getState());
