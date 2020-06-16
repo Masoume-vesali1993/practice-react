@@ -1,6 +1,6 @@
 import { createStore } from 'redux';
 import { act } from 'react-dom/test-utils';
-import {addAction, decrementActiion, incrementAction. 
+import {addAction, decrementActiion, incrementAction,
          ADD_ACTION,INC_ACTION,DEC_ACTION
         } from './redux-test-action';
 
