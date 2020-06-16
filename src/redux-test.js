@@ -51,3 +51,8 @@ store.dispatch(ARTactions.addAction(2) );
 
 
 store.dispatch(ARTactions.addAction(5) );
+
+//5- Listen to changes 
+store.subscribe(() => {
+    console.log(store.getState());
+});
