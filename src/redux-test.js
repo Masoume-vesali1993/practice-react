@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import * as Acts  from './redux-test-action';
 
 //create store
     //initial state
@@ -8,7 +9,7 @@ import { createStore } from 'redux';
 
     //create reducer
     const reducer = (state = initState, action) => {
-        if(action.type === 'ADD_ITEM'){
+        if(action.type === Acts.ADD_ACTION ){
             return {
                 ...state,
                 todo: [...state.todo, action.item]
@@ -26,6 +27,6 @@ import { createStore } from 'redux';
     });
 
 //dispatch actions
-    store.dispatch({type: 'ADD_ITEM', item: {title: 'todo 1', body: 'fffff'}});
-    store.dispatch({type: 'ADD_ITEM', item: {title: 'todo 2', body: 'fffffkk'}});
-    store.dispatch({type: 'ADD_ITEM', item: {title: 'todo 3', body: 'fffffhh'}});
+    store.dispatch({type: Acts.ADD_ACTION , item: {title: 'todo 1', body: 'fffff'}});
+    store.dispatch({type: Acts.ADD_ACTION , item: {title: 'todo 2', body: 'fffffkk'}});
+    store.dispatch({type: Acts.ADD_ACTION , item: {title: 'todo 3', body: 'fffffhh'}});
