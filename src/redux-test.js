@@ -15,6 +15,13 @@ import * as Acts  from './redux-test-action';
                 todo: [...state.todo, action.item]
             };
         }
+
+        if(action.type === Acts.REMOVE_ACTION){
+            return {
+                ...state,
+                todo: state.todo.filter(item => item.title !== action.title)
+            }
+        }
         return state;
     }
 
