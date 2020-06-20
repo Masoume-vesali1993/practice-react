@@ -27,6 +27,7 @@ import * as Acts  from './redux-test-action';
     });
 
 //dispatch actions
-    store.dispatch({type: Acts.ADD_ACTION , item: {title: 'todo 1', body: 'fffff'}});
-    store.dispatch({type: Acts.ADD_ACTION , item: {title: 'todo 2', body: 'fffffkk'}});
-    store.dispatch({type: Acts.ADD_ACTION , item: {title: 'todo 3', body: 'fffffhh'}});
+    store.dispatch(Acts.addAction({title: 'todo 1',body: 'ccccccccccc'}));
+    store.dispatch(Acts.addAction({title: 'todo 2',body: 'aaaaaaaaaaaa'}));
+    store.dispatch(Acts.addAction({title: 'todo 3',body: 'bbbbbbbbbbbb'}));
+ 
