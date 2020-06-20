@@ -26,8 +26,12 @@ import * as Acts  from './redux-test-action';
         console.log(store.getState());
     });
 
-//dispatch actions
+//dispatch add items
     store.dispatch(Acts.addAction({title: 'todo 1',body: 'ccccccccccc'}));
     store.dispatch(Acts.addAction({title: 'todo 2',body: 'aaaaaaaaaaaa'}));
     store.dispatch(Acts.addAction({title: 'todo 3',body: 'bbbbbbbbbbbb'}));
+
+
+    //dispatch delet item
+    store.dispatch(Acts.removeAction('todo 2'));
  
