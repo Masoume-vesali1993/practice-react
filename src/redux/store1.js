@@ -14,4 +14,8 @@ const reducer = (state, action) =>{
 
 const store = createStore(reducer);
 
+store.subscribe(() => {
+    console.log('[store subscriber]' , store.getState());
+})
+
 store.dispatch(Store1Actions.addUser({id: 2, name: 'parham', family: 'vesali'}));
