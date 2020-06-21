@@ -9,6 +9,13 @@ const initialState = {
 };
 
 const reducer = (state = initialState , action) =>{
+    switch(action.type){
+        case Store1Actions.ADD_USER:
+            return{
+                ...state,
+                users: [...state.users, action.user]
+            }
+    }
     return state;
 };
 
