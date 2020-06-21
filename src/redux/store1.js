@@ -8,7 +8,7 @@ const initialState = {
     auth: null
 };
 
-const reducer = (state, action) =>{
+const reducer = (state = initialState , action) =>{
     return state;
 };
 
