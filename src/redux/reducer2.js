@@ -9,6 +9,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState , action) =>{
+    console.log('reducer 2', action);
     switch(action.type){
         case Acts.ADD_PRODUCT:
             return{

@@ -9,6 +9,7 @@ const initialState = {
 };
 
 const reducer = (state = initialState , action) =>{
+    console.log('reducer 1', action);
     switch(action.type){
         case Acts.ADD_USER:
             return{
