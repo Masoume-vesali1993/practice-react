@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+
 import * as Acts from './reducer2-actions';
 
 const initialState = {
@@ -19,10 +19,4 @@ const reducer = (state = initialState , action) =>{
     return state;
 };
 
-const store = createStore(reducer);
-
-store.subscribe(() => {
-    console.log('[store 2 subscriber]' , store.getState());
-})
-
-store.dispatch(Acts.addProduct({id: 2, title: 'product 2', price: 15000 }));
+export default reducer;

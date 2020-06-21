@@ -1,4 +1,4 @@
-import { createStore } from 'redux';
+
 import * as Acts from './store1-actions';
 
 const initialState = {
@@ -19,10 +19,4 @@ const reducer = (state = initialState , action) =>{
     return state;
 };
 
-const store = createStore(reducer);
-
-store.subscribe(() => {
-    console.log('[store 1 subscriber]' , store.getState());
-})
-
-store.dispatch(Acts.addUser({id: 2, name: 'parham', family: 'vesali'}));
+export default reducer;
