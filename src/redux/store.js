@@ -1,10 +1,11 @@
-import { createStore } from 'redux';
+import { createStore, combineReducers } from 'redux';
 import reducer1 from './store1';
 import reducer2 from './reducer2';
 
 import * as Acts1 from './store1-actions';
 import * as Acts2 from './reducer2-actions';
 
+const reducer = combineReducers();
 const store = createStore(reducer1);
 
 store.subscribe(() => {
