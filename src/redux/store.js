@@ -6,8 +6,8 @@ import * as Acts1 from './store1-actions';
 import * as Acts2 from './reducer2-actions';
 
 const reducer = combineReducers({
-    r1:reducer1,
-    r2:reducer2
+    reducer1,
+    reducer2
 });
 
 const store = createStore(reducer);
