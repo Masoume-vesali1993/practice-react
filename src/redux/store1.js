@@ -1,4 +1,5 @@
 import { createStore } from 'redux';
+import * as Store1Actions from './store1-actions';
 
 const initialState = {
     users: [
