@@ -30,7 +30,12 @@ class Todo extends Component{
     }
 
     deleteTodo = (id) => {
-        
+        this.setState((oldState, props) => {
+            return {
+                ...oldState,
+                items: oldState.items.filter(item => item.id !== id)
+            };
+        })
     }
 
     render() { 
