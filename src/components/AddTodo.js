@@ -11,6 +11,7 @@ class AddTodo extends Component{
         this.props.addItem({
             title: this.inputBox.value
         });
+        
         this.inputBox.value = '';
         this.inputChange();
     }

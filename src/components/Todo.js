@@ -16,7 +16,7 @@ class Todo extends Component{
                 <b>{item.title}</b>
                 <button
                     style={{display: 'inline-block', color:'red', marginLeft: '15px'}}
-                    onClick={() => this.deleteTodo(item.id)}x></button>
+                    onClick={() => this.deleteTodo(item.id)}>x</button>
             </div>
         ))
     }
@@ -29,7 +29,7 @@ class Todo extends Component{
         this.setState((oldState, props) => {
             return {
                 ...oldState,
-                items: [...oldState.item, {
+                items: [...oldState.items, {
                     id: this.getNextId(),
                     title: todo.title,
                     done: false
@@ -44,7 +44,7 @@ class Todo extends Component{
                 ...oldState,
                 items: oldState.items.filter(item => item.id !== id)
             };
-        })
+        });
     }
 
     render() { 
