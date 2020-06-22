@@ -27,7 +27,12 @@ class Todo extends Component{
     }
 
     render() { 
-
+        return (
+            <div className="todo-list">
+                <AddTodo addItem={this.addTodo} />
+                {this.renderItems()}
+            </div>
+        )
     }
 }
 
