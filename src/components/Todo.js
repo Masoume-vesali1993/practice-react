@@ -11,7 +11,14 @@ class Todo extends Component{
     }
 
     renderItems = () => {
-
+        return this.state.items.map(item => (
+            <div key={item.id}>
+                <b>{item.title}</b>
+                <button
+                    style={{display: 'inline-block', color:'red', marginLeft: '15px'}}
+                    onClick={() => this.deleteTodo(item.id)}x></button>
+            </div>
+        ))
     }
 
     getNextId = () => {
