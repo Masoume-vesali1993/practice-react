@@ -26,7 +26,16 @@ class Todo extends Component{
     }
 
     addTodo = (todo) => {
-        
+        this.setState((oldState, props) => {
+            return {
+                ...oldState,
+                items: [...oldState.item, {
+                    id: this.getNextId(),
+                    title: todo.title,
+                    done: false
+                }]
+            };
+        });
     }
 
     deleteTodo = (id) => {
