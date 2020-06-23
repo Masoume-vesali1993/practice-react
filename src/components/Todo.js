@@ -3,7 +3,8 @@ import AddTodo from './AddTodo';
 import store, {addTodo, removeTodo} from '../redux/todoStore';
 
 
-store.dispatch();
+store.dispatch(addTodo({title:'my todo'}));
+store.dispatch(removeTodo(1));
 
 class Todo extends Component{
     state = {
