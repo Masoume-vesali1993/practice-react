@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import AddTodo from './AddTodo';
+import store from '../redux/todoStore';
+
+
+store.dispatch();
 
 class Todo extends Component{
     state = {
