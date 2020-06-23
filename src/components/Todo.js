@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AddTodo from './AddTodo';
-import store from '../redux/todoStore';
+import store, {addTodo, removeTodo} from '../redux/todoStore';
 
 
 store.dispatch();
