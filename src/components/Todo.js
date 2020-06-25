@@ -42,13 +42,21 @@ class Todo extends Component{
     }
 
     render() { 
+        console.log(this.props);
         return (
             <div className="todo-list">
-                <AddTodo addItem={this.addTodo} />
-                {this.renderItems()}
+                {/* <AddTodo addItem={this.addTodo} /> */}
+                {/* {this.renderItems()} */}
             </div>
         );
     }
 }
 
-export default connect()(Todo);
+
+const st = (state) => {
+    return ({
+        items: state.items
+    });
+}
+
+export default connect(st) (Todo);
