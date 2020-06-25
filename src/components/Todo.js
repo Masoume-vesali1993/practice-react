@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Provider } from 'react-redux';
+import { Provider, connect } from 'react-redux';
 import AddTodo from './AddTodo';
 import todoStore, {addTodo, removeTodo} from '../redux/todoStore';
 
@@ -52,14 +52,12 @@ class Todo extends Component{
 
     render() { 
         return (
-            <Provider store={todoStore}>
-                <div className="todo-list">
-                    <AddTodo addItem={this.addTodo} />
-                    {this.renderItems()}
-                </div>
-            </Provider>
-        )
+            <div className="todo-list">
+                <AddTodo addItem={this.addTodo} />
+                {this.renderItems()}
+            </div>
+        );
     }
 }
 
-export default Todo;
+export default connect()(Todo);
