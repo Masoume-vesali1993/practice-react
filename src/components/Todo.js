@@ -5,7 +5,7 @@ import  {addTodo, removeTodo} from '../redux/todoStore';
 
 class Todo extends Component{
     renderItems = () => {
-        return this.state.items.map(item => (
+        return this.props.items.map(item => (
             <div key={item.id}>
                 <b>{item.title}</b>
                 <button
@@ -42,11 +42,10 @@ class Todo extends Component{
     }
 
     render() { 
-        console.log(this.props);
         return (
             <div className="todo-list">
-                {/* <AddTodo addItem={this.addTodo} /> */}
-                {/* {this.renderItems()} */}
+                <AddTodo addItem={this.addTodo} />
+                {this.renderItems()}
             </div>
         );
     }
@@ -59,4 +58,4 @@ const mapStateToProps = (state) => {
     });
 }
 
-export default connect(st) (Todo);
+export default connect(mapStateToProps) (Todo);
