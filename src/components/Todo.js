@@ -42,8 +42,9 @@ class Todo extends Component{
     }
 
     render() { 
-
+        console.log(this.props);
         this.props.addItem();
+        this.props.removeItem ();
         return (
             <div className="todo-list">
                 <AddTodo addItem={this.addTodo} />
@@ -64,7 +65,8 @@ const mapDispatchToProps = (dispatch) => {
     return ({
         addItem : () => dispatch(addTodo({
             title: 'my custem todo'
-        }))
+        })),
+        removeItem: () => dispatch(removeTodo(1))
     });
 }
 
