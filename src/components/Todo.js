@@ -42,6 +42,8 @@ class Todo extends Component{
     }
 
     render() { 
+
+        this.props.addItem();
         return (
             <div className="todo-list">
                 <AddTodo addItem={this.addTodo} />
@@ -56,6 +58,14 @@ const mapStateToProps = (state) => {
     return ({
         items: state.items
     });
+};
+
+const mapDispatchToProps = (dispatch) => {
+    return ({
+        addItem : () => dispatch(addTodo({
+            title: 'my custem todo'
+        }))
+    });
 }
 
-export default connect(mapStateToProps) (Todo);
+export default connect(mapStateToProps, mapDispatchToProps) (Todo);
