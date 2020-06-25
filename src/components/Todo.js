@@ -53,7 +53,7 @@ class Todo extends Component{
 }
 
 
-const st = (state) => {
+const mapStateToProps = (state) => {
     return ({
         items: state.items
     });
