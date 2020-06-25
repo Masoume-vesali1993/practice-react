@@ -11,6 +11,15 @@ const removeTodo = (id) => ({
     id
 });
 
+
+
+const initialState = {
+    items: [
+        {id:1, title: 'todo 1', done: false},
+        {id:2, title: 'todo 2', done: false},
+    ]
+};
+
 const todoReducer = (state = {}, action) => {
     switch(action.type) {
         case ADD_TODO_ACTION:
