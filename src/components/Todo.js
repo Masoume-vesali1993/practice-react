@@ -1,10 +1,7 @@
 import React, { Component } from 'react';
+import { Provider } from 'react-redux';
 import AddTodo from './AddTodo';
-import store, {addTodo, removeTodo} from '../redux/todoStore';
-
-
-store.dispatch(addTodo({title:'my todo'}));
-store.dispatch(removeTodo(1));
+import todoStore, {addTodo, removeTodo} from '../redux/todoStore';
 
 class Todo extends Component{
     state = {
@@ -55,10 +52,12 @@ class Todo extends Component{
 
     render() { 
         return (
-            <div className="todo-list">
-                <AddTodo addItem={this.addTodo} />
-                {this.renderItems()}
-            </div>
+            <Provider store={todoStore}>
+                <div className="todo-list">
+                    <AddTodo addItem={this.addTodo} />
+                    {this.renderItems()}
+                </div>
+            </Provider>
         )
     }
 }
