@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Provider, connect } from 'react-redux';
+import { connect } from 'react-redux';
 import AddTodo from './AddTodo';
-import todoStore, {addTodo, removeTodo} from '../redux/todoStore';
+import  {addTodo, removeTodo} from '../redux/todoStore';
 
 class Todo extends Component{
     state = {
