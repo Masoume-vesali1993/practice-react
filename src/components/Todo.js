@@ -33,18 +33,10 @@ class Todo extends Component{
     }
 
     deleteTodo = (id) => {
-        this.setState((oldState, props) => {
-            return {
-                ...oldState,
-                items: oldState.items.filter(item => item.id !== id)
-            };
-        });
+        this.props.removeItem(id);
     }
 
     render() { 
-        console.log(this.props);
-        this.props.addItem();
-        this.props.removeItem ();
         return (
             <div className="todo-list">
                 <AddTodo addItem={this.addTodo} />
@@ -66,7 +58,7 @@ const mapDispatchToProps = (dispatch) => {
         addItem : () => dispatch(addTodo({
             title: 'my custem todo'
         })),
-        removeItem: () => dispatch(removeTodo(1))
+        removeItem: (id) => dispatch(removeTodo(id))
     });
 }
 
