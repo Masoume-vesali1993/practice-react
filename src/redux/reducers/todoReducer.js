@@ -27,7 +27,7 @@ const todoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 items: [...state.items,{
-                    id: 3,
+                    id: state.items[state.items.length-1].id+1,
                     title: action.todo.title,
                     done: false
                 }]
