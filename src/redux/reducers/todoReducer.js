@@ -21,9 +21,18 @@ const initialState = {
 };
 
 const todoReducer = (state = initialState, action) => {
-    switch(action.type) {
+    switch(action.type){
         case ADD_TODO_ACTION:
             console.log('add todo action', action.todo);
+            return {
+                ...state,
+                items: [...state.items,{
+                    id: 3,
+                    title: action.todo.title,
+                    done: false
+                }]
+            };
+
             break;
             
         case REMOVE_TODO_ACTION:
