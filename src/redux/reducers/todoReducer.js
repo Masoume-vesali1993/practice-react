@@ -28,6 +28,11 @@ const todoReducer = (state = initialState, action) => {
             
         case REMOVE_TODO_ACTION:
             console.log('remove todo action', action.id);
+
+        return{
+            ...state,
+            items: state.items.filter(item => item.id !== action.id)
+        };
             break;
     }
 
