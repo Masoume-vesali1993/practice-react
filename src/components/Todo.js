@@ -55,9 +55,6 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        addItem : () => dispatch(addTodo({
-            title: 'my custem todo'
-        })),
         removeItem: (id) => dispatch(removeTodo(id))
     });
 }
