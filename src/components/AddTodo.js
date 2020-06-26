@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class AddTodo extends Component{
     state = {
@@ -9,7 +10,7 @@ class AddTodo extends Component{
 
     addTodoHandler = () => {
         this.props.addItem({
-            title: this.inputBox.value
+            'title': this.inputBox.value
         });
         
         this.inputBox.value = '';
@@ -33,4 +34,10 @@ class AddTodo extends Component{
     }
 }
 
-export default AddTodo;
+const mapDispatchToProps = (dispatch) => {
+    return ({
+        addItem: () => console.log('hi')
+    });
+}
+
+export default connect(null , mapDispatchToProps) (AddTodo);
