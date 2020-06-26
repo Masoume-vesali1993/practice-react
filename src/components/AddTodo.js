@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { addTodo } from '../redux/todoStore';
 
 class AddTodo extends Component{
     state = {
@@ -36,7 +37,7 @@ class AddTodo extends Component{
 
 const mapDispatchToProps = (dispatch) => {
     return ({
-        addItem: () => console.log('hi')
+        addItem: (todo) => dispatch(addTodo(todo))
     });
 }
 
