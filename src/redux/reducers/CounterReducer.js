@@ -20,12 +20,12 @@ const reducer = (state = initialState, action) => {
         case ADD_ACTION:
             return {
                 ...state,
-                count: state.count + 1
+                count: state.count < 10 ? state.count + 1 : state.count
             };
         case MINUS_ACION:
             return {
                 ...state,
-                count: state.count - 1
+                count: state.count > 1 ? state.count - 1 : 0
             };
     }
 
