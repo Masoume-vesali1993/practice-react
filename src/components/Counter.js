@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { connect } from 'react-redux';
 
 class Counter extends Component{
     render(){
@@ -11,4 +11,4 @@ class Counter extends Component{
     }
 }
 
-export default Counter;
+export default connect()(Counter);
