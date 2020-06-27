@@ -4,7 +4,7 @@ class CounterButtons extends Component{
     render(){
         return (
             <div className="counter-buttons">
-
+                counter buttons
             </div>
         );
     }
