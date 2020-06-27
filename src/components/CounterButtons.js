@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { addAction } from '../redux/reducers/CounterReducer';
+import { addAction, minusAction } from '../redux/reducers/CounterReducer';
 import { connect } from 'react-redux';
 
 class CounterButtons extends Component{
@@ -7,7 +7,7 @@ class CounterButtons extends Component{
         return (
             <div className="counter-buttons">
                 <button onClick={ this.props.addToCounter }>+1</button>
-                <button>-1</button>
+                <button onClick={ this.props.reducerCounter }>-1</button>
             </div>
         );
     }
@@ -15,7 +15,8 @@ class CounterButtons extends Component{
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        addToCounter: () => dispatch(addAction())
+        addToCounter: () => dispatch(addAction()),
+        reducerCounter: () => dispatch(minusAction())
     };
 };
 
