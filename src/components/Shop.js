@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 class Shop extends Component {    
+
+    renderItems = () => {
+        return 'items here';
+    }
+ 
     render() {
-        console.log(this.props);
         return (
             <div className='shop'>
-                shop...
+                { this.renderItems() }
             </div>
         )
     }
