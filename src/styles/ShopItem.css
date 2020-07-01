@@ -1,0 +1,16 @@
+.shop-item{
+    border: 1px solid #777;
+    width: 250px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.shop-item h3{
+    padding: 8px;
+    margin: 0;
+    background: #77F;
+}
+
+.shop-item .shop-item-detail b {
+    padding: 10px;
+}
