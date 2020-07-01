@@ -11,6 +11,8 @@ class ShopItem extends Component {
                 <h3>{ this.props.name }</h3>
                 <div className="shop-item-detail">
                     <b>{ this.props.price }</b>
+
+                    <button>add</button>
                 </div>
             </div>
         ); 

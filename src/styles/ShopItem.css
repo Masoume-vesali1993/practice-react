@@ -13,4 +13,5 @@
 
 .shop-item .shop-item-detail b {
     padding: 10px;
+    display: inline-block;
 }
