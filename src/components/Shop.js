@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import ShopItem from './ShopItem';
 class Shop extends Component {    
 
     renderItems = () => {
-        return 'items here';
+        return this.props.items.map(item => (
+            <ShopItem {...item} />
+        ));
     }
  
     render() {
