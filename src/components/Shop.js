@@ -6,7 +6,7 @@ class Shop extends Component {
 
     renderItems = () => {
         return this.props.items.map(item => (
-            <ShopItem {...item} />
+            <ShopItem key={item.id} {...item} />
         ));
     }
  
