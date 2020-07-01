@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-class Shop extends Component {
-
+class Shop extends Component {    
     render() {
+        console.log(this.props);
         return (
             <div className='shop'>
                 shop...
@@ -11,4 +12,8 @@ class Shop extends Component {
     }
 }
 
-export default Shop;
+const mapStateToProps = (state) => ({
+    items: state.items
+})
+
+export default connect(mapStateToProps)(Shop);
