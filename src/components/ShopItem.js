@@ -3,9 +3,14 @@ import React, { Component } from 'react';
 class ShopItem extends Component {
 
     render(){
+        console.log(this.props);
+        
         return(
             <div className="shop-item">
-                item
+                <h3>{ this.props.name }</h3>
+                <div className="shop-item-detail">
+                    <b>{ this.props.price }</b>
+                </div>
             </div>
         ); 
     }
